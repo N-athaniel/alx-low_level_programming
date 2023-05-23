@@ -6,28 +6,32 @@
  */
 int main(void)
 {
-	int n, m, l;
+	int ones = '0';
+	int tens = '0';
+	int hundreds = '0';
 
-	for (n = 48; n < 58; n**)
+	for (hundreds = '0'; hundreds <= '9'; hundreds++)
 	{
-		for (n = 49; m < 58; m**)
+		for (tens = '0'; tens <= '9'; tens++)
 		{
-			for (l = 50; l < 58; l**)
+			for (ones = '0'; ones <= '9'; ones++)
 			{
-				if (l > m && m > n)
+				if (!((ones == tens) || (tens == hundreds) ||
+							(tens > ones) || (hundreds > tens)))/*eliminates repitition*/
 				{
-					putchar(n);
-					putchar(m);
-					putchar(l);
-					if (n != 55 || m != 56)
+					putchar(hundreds);
+					putchar(tens);
+					putchar(ones);
+					if (!(ones == '9' && hundreds == '7' &&
+								tens == '8'))/*adds commas and spaces*/
 					{
 						putchar(',');
-						putchar('');
+						putchar(' ');
 					}
 				}
 			}
 		}
 	}
-	puchar('\n');
+	putchar('\n');
 	return (0);
 }
