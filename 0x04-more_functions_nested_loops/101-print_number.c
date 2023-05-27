@@ -2,7 +2,7 @@
 
 /**
  * print_number - prints an integer
- * @n: .input integer parameter
+ * @n: input integer parameter
  *
  * Return: Always 0
  */
@@ -20,5 +20,5 @@ void print_number(int n)
 	{
 		print_number(i / 10);
 	}
-	_putchar(1 % 10 + '0');
+	_putchar(i % 10 + '0');
 }
