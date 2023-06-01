@@ -3,7 +3,7 @@
 /**
  * string_toupper - change all lowercase letters to uppercase
  * @str: pointer
- * Return: n
+ * Return: char
  */
 
 char *string_toupper(char *str)
