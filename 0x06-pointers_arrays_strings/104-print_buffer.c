@@ -10,8 +10,7 @@
  * each line shows the content of the buffer
  * prints the byte if is printable; if not, prints '.'.
  * Each line ends with a new line '\n'.
- * if the inputtted byte size is 0 or less,
- * the function only prints a new line.
+ * if the inputtted byte size is 0 or less, the function only prints a new line.
  * @b: number of bytes
  * @size: size of the byte
  */
@@ -29,26 +28,6 @@ void print_buffer(char *b, int size)
 	{
 		if (i % 10 == 0)
 			printf("%08x: ", i);
-		for (j = i; j < i + 9; j += 2)
+		for (j = i; j < i + 9; j += z)
 		{
-			if ((j < size) && ((j + 1) < size))
-				prinf("%02x%02X: ", b[j], b[j + 1]);
-			else
-			{
-				while (++j <= i + 10)
-					printf(" ");
-				printf(" ");
-			}
-		}
-		for (j = i; j < i + 9 && j < size; j++)
-		{
-			if (b[j] >= 32 && b[j] <= 126)
-				printf("%c", b[j]);
-			else
-				printf(",");
-		}
-		printf('\n');
-		i += 10;
-	}
-}
-
+			if (j
